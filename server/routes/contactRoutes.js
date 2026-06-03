@@ -2,13 +2,19 @@ const express = require("express");
 const router = express.Router();
 const Contact = require("../models/Contact");
 
-router.get("/", async (req, res) => {
+router.get("/", (req, res) => {
   res.json({ message: "Contact API is working" });
 });
 
 router.post("/", async (req, res) => {
   try {
-    const contact = await Contact.create(req.body);
+    const { name, email, message } = req.body;
+
+    const contact = await Contact.create({
+      name,
+      email,
+      message,
+    });
 
     res.status(201).json({
       success: true,
@@ -16,7 +22,9 @@ router.post("/", async (req, res) => {
       data: contact,
     });
   } catch (error) {
-    res.status(400).json({
+    console.log("Contact Error:", error);
+
+    res.status(500).json({
       success: false,
       message: error.message,
     });

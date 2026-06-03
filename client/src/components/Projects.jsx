@@ -7,7 +7,7 @@ function Projects() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/projects")
+      .get("https://portfolio-fullstack-1-ee7p.onrender.com/api/projects")
       .then((res) => setProjects(res.data))
       .catch((err) => console.log(err));
   }, []);

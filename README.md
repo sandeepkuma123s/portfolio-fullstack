@@ -2,7 +2,8 @@
 
 A full-stack personal portfolio website built to showcase my skills, projects, experience, education, and contact details.
 
-![Portfolio Preview](./client/src/assets/portfolio-preview.png)
+![Portfolio Preview]<img width="1870" height="883" alt="image" src="https://github.com/user-attachments/assets/1465da6c-6a09-4af2-8be8-ef61752a1ae7" />
+
 
 ## Live Demo
 
